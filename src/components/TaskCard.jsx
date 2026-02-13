@@ -28,12 +28,14 @@ const style = {
         updateTask(columnKey, task.id, editedText)
         setIsEditing(false);
     }
-    return (
+     let nextColumn = null;
+
+    if (columnKey === "todo") nextColumn = "progress"
+    else if (columnKey === "progress") nextColumn = "done";
+return (
   <div
     ref={setNodeRef}
     style={style}
-    {...attributes}
-    {...listeners}
     className={`card ${task.priority.toLowerCase()}`}
   >
     {isEditing ? (
@@ -50,8 +52,20 @@ const style = {
       </span>
     )}
 
-    <div className="card">
-     
+    <div className={`card ${task.priority.toLowerCase()}`}>
+  <span
+    {...listeners}
+    {...attributes}
+    style={{ cursor: "grab" }}
+  >
+    ⠿
+  </span>
+      {nextColumn && (
+        <button onClick={() => moveTask(columnKey, nextColumn, task.id)}>
+          ➡
+        </button>
+      )}
+
       <button
         className="delete-btn"
         onClick={() => deleteTask(columnKey, task.id)}
