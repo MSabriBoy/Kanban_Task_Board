@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./app.css"
+import "./App.css"
 import Column from "./components/Column";
 import { DndContext, closestCorners } from "@dnd-kit/core";
 
