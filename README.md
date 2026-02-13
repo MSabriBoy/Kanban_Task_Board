@@ -31,7 +31,7 @@ This project demonstrates real-world frontend development concepts including com
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/kanban-task-board.git
+git clone https://github.com/MSabriBoy/Kanban_Task_Board.git
 ```
 2. Navigate to project directory:
 
