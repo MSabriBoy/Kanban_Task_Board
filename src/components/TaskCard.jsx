@@ -69,9 +69,7 @@ return (
       <button
         className="delete-btn"
         onClick={() => deleteTask(columnKey, task.id)}
-      >
-        ❌
-      </button>
+      >❌</button>
     </div>
   </div>
 );
